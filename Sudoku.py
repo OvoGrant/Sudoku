@@ -46,6 +46,9 @@ def main():
                         board.selected_cell.num = c
                         board.draw_self(WINDOW)
                         pygame.draw.rect(WINDOW,(0,255,0),pygame.Rect(getPos(x),getPos(y),SQUARE_SIZE, SQUARE_SIZE),2)
+                    if event.key == ord('s'):
+                        board.solved()
+                        board.draw_self(WINDOW)
                 
                 
         pygame.display.update()
